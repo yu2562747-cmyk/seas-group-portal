@@ -1,9 +1,13 @@
-﻿/* src/index.css */
-html,
-body {
-  margin: 0;
-  padding: 0;
+﻿@import "tailwindcss";
+
+@layer base {
+  html, body { height: 100%; }
+  body { @apply bg-white text-slate-900 antialiased; }
+
+  a { @apply text-sky-700 hover:text-sky-900 underline-offset-4 hover:underline; }
 }
-a {
-  color: inherit;
+
+@layer components {
+  .container { @apply mx-auto max-w-6xl px-4; }
+  .section { @apply py-12; }
 }
